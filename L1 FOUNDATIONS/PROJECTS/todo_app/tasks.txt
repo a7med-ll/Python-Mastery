@@ -1,0 +1,2 @@
+1|go to gym 
+0|do python
