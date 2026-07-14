@@ -1,0 +1,16 @@
+[project]
+name = "wordcount"
+version = "0.1.0"
+dependencies = [
+    "typer",
+]
+
+[project.scripts]
+wordcount = "wordcount.main:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
