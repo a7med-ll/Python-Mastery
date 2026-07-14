@@ -1,5 +1,5 @@
-from my_api_client.client import ApiClient
+from my_api_client import ApiClient, Post
 
 client = ApiClient()
 post = client.get_post(1)
-print(post)
+print(isinstance(post, Post))
