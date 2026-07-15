@@ -1,0 +1,7 @@
+{
+    "app_name": "BankingApp",
+    "database": {
+        "host": "localhost",
+        "port": 5432
+    }
+}
