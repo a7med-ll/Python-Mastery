@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+
+  fastapi:
+
+    build:
+      context: ./fastapi_container_example
+
+    container_name: l4-012-fastapi-container
+
+    ports:
+      - "8000:8000"
+
+    restart: always
