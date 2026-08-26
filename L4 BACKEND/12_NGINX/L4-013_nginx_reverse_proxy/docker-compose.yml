@@ -1,0 +1,62 @@
+# -----------------------------------------------------------------------------
+# Docker Compose Services
+# -----------------------------------------------------------------------------
+
+services:
+
+
+  # ---------------------------------------------------------------------------
+  # FastAPI Backend Service
+  # ---------------------------------------------------------------------------
+
+  fastapi:
+
+
+    # Build image from FastAPI Dockerfile.
+    build:
+
+      context: ./fastapi_app
+
+
+    # Container name.
+    container_name: l4-013-fastapi-container
+
+
+    # Internal backend port.
+    expose:
+
+      - "8000"
+
+
+
+  # ---------------------------------------------------------------------------
+  # Nginx Reverse Proxy Service
+  # ---------------------------------------------------------------------------
+
+  nginx:
+
+
+    # Use official Nginx image.
+    image: nginx:latest
+
+
+    # Container name.
+    container_name: l4-013-nginx-container
+
+
+    # Map Nginx configuration.
+    volumes:
+
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+
+    # Public port.
+    ports:
+
+      - "80:80"
+
+
+    # Start after FastAPI container.
+    depends_on:
+
+      - fastapi
