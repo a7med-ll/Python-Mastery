@@ -1,0 +1,179 @@
+id,category,question,expected,actual_output,vector_scores,rerank_scores,nli,nli_confidence_percent,verification_sentence,pass_fail,notes
+1,exact,Who is the Boreal service coordinator?,"Mira Haddad; page 1. Do not confuse Tarek Amin, coordinator of Boreal Express.","Search
+Rank 1, page 1, p1-c1: BOREAL / OPERATIONS MANUAL
+Current service schedule
+Boreal delivery program - revision 3, effective 1 September 2028. This is a fictional operations
+document. Physical PDF page numbers are the citation reference.
+The Boreal service coordinator is Mira Haddad. The depot is Harbor East. Standard deliveries
+leave the depot at 06:40 each weekday.
+Boreal delivery fee is AED 27.50 per parcel. There is an additional AED 4.25 fragile-handling
+
+Rank 2, page 2, p2-c1: BOREAL / OPERATIONS MANUAL
+Revision history and identifiers
+Revision 1, superseded on 1 September 2028: the standard fee was AED 22.00 and the parcel
+weight limit was 15 kg. Revision 3 governs current shipments.
+Boreal Express is a separate service coordinated by Tarek Amin. Boreal Express leaves the
+North Gate depot at 07:15. These details do not describe the Boreal delivery program.
+In this manual, lead can mean the service coordinator or the safety lead. The Boreal safety lead",0.561; 0.4752,7.0182; 5.0862,not shown / not checked,,,PASS,Mira Haddad correctly retrieved; separate Express coordinator appears as a distractor.
+2,paraphrase,How many working days does normal Boreal transit take?,Two business days; page 1.,"Search
+Rank 1, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4",0.5692,6.5319,not shown / not checked,,,PASS,Two business days correctly retrieved.
+3,combined,"What is the fee before tax for fragile parcel BX-52, and is its weight allowed?","AED 31.75 = 27.50 + 4.25; 18.5 kg is accepted inclusively. Pages 1 and 2. Evidence must include fragile status, weight and fee/limit rules; no computed answer required for evidence-only scope.","Search
+Rank 1, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4
+
+Rank 2, page 2, p2-c2: is Hala Saleh. Shipment BX-47 was sent using the Boreal service. Its route code is R7. It is not a Boreal
+Express shipment.
+Shipment BX-52 uses route R4. BX-52 is a fragile parcel weighing 18.5 kg. The current service
+schedule contains the rules for its fee and acceptance.
+Fictional evaluation fixture | Page 2 of 4",0.6034; 0.4706,4.2748; 3.8901,not shown / not checked,,,FAIL,"FAIL: parcel weight and fragile status retrieved, but AED 27.50 and AED 4.25 fee values omitted. Cannot derive fee from displayed evidence. Arithmetic generation was not required."
+4,contradiction,Boreal accepts parcels weighing twenty kilograms. Is that allowed by the current weight rule?,Contradicted: rejects weights over 18.5 kg; page 1.,"Search
+The premise in the question is contradicted by the document.
+Claim checked:
+Boreal accepts parcels weighing twenty kilograms
+Evidence used for verification:
+Parcels heavier than 18.5 kg are rejected.
+NLI confidence: 92.64% | Evidence rank: 2
+Rank 1, page 2, p2-c2: is Hala Saleh. Shipment BX-47 was sent using the Boreal service. Its route code is R7. It is not a Boreal
+Express shipment.
+Shipment BX-52 uses route R4. BX-52 is a fragile parcel weighing 18.5 kg. The current service
+schedule contains the rules for its fee and acceptance.
+Fictional evaluation fixture | Page 2 of 4
+
+Rank 2, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4
+
+Rank 3, page 2, p2-c1: BOREAL / OPERATIONS MANUAL
+Revision history and identifiers
+Revision 1, superseded on 1 September 2028: the standard fee was AED 22.00 and the parcel
+weight limit was 15 kg. Revision 3 governs current shipments.
+Boreal Express is a separate service coordinated by Tarek Amin. Boreal Express leaves the
+North Gate depot at 07:15. These details do not describe the Boreal delivery program.
+In this manual, lead can mean the service coordinator or the safety lead. The Boreal safety lead",0.3999; 0.5958; 0.5741,3.9765; 3.8733; 3.3844,contradicted,92.64,"Parcels heavier than 18.5 kg are rejected.
+",PASS,Correct contradiction grounded in rejection of weights above 18.5 kg.
+5,wrong_page,"According to page 4, at what time do standard Boreal deliveries leave?","06:40 on weekdays, supported on page 1, not page 4. Cite actual source.","Search
+Rank 1, page 1, p1-c1: BOREAL / OPERATIONS MANUAL
+Current service schedule
+Boreal delivery program - revision 3, effective 1 September 2028. This is a fictional operations
+document. Physical PDF page numbers are the citation reference.
+The Boreal service coordinator is Mira Haddad. The depot is Harbor East. Standard deliveries
+leave the depot at 06:40 each weekday.
+Boreal delivery fee is AED 27.50 per parcel. There is an additional AED 4.25 fragile-handling
+
+Rank 2, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4
+
+Rank 3, page 2, p2-c1: BOREAL / OPERATIONS MANUAL
+Revision history and identifiers
+Revision 1, superseded on 1 September 2028: the standard fee was AED 22.00 and the parcel
+weight limit was 15 kg. Revision 3 governs current shipments.
+Boreal Express is a separate service coordinated by Tarek Amin. Boreal Express leaves the
+North Gate depot at 07:15. These details do not describe the Boreal delivery program.
+In this manual, lead can mean the service coordinator or the safety lead. The Boreal safety lead",0.6616; 0.5744; 0.4967,6.2742; 3.7421; 2.104,not shown / not checked,,,PASS,06:40 weekday departure retrieved with page 1 citation despite requested page 4.
+6,unrelated,Who won the 2026 World Cup?,Abstain: no relevant evidence in this operations manual. Do not answer from outside knowledge.,"Search
+No sufficiently relevant evidence was found in the indexed document.
+",not shown,not shown,not shown / not checked,,,PASS,Correctly abstains on an unrelated question.
+7,ambiguous,Who is the Boreal lead?,"Distinguish Mira Haddad (service coordinator, page 1) and Hala Saleh (safety lead, page 2), or clarify the role. Evidence must expose both meanings.","Search
+Rank 1, page 2, p2-c1: BOREAL / OPERATIONS MANUAL
+Revision history and identifiers
+Revision 1, superseded on 1 September 2028: the standard fee was AED 22.00 and the parcel
+weight limit was 15 kg. Revision 3 governs current shipments.
+Boreal Express is a separate service coordinated by Tarek Amin. Boreal Express leaves the
+North Gate depot at 07:15. These details do not describe the Boreal delivery program.
+In this manual, lead can mean the service coordinator or the safety lead. The Boreal safety lead",0.4856,4.0784,not shown / not checked,,,FAIL,FAIL: retrieves the ambiguity description but truncates before Hala Saleh; Mira Haddad also absent. Neither complete role distinction nor clarification.
+8,cross_page,Where does Boreal shipment BX-47 terminate?,"Amber Quay: BX-47 uses R7 (page 2), R7 terminates at Amber Quay (page 3). Both link and destination must be retrieved.","Search
+Rank 1, page 2, p2-c2: is Hala Saleh. Shipment BX-47 was sent using the Boreal service. Its route code is R7. It is not a Boreal
+Express shipment.
+Shipment BX-52 uses route R4. BX-52 is a fragile parcel weighing 18.5 kg. The current service
+schedule contains the rules for its fee and acceptance.
+Fictional evaluation fixture | Page 2 of 4
+
+Rank 2, page 4, p4-c1: BOREAL / OPERATIONS MANUAL
+Operating records
+Parcel BX-52 passed its packaging inspection on 3 September 2028. Packaging inspection is
+separate from driver permit checks.
+On 4 September 2028, the Boreal depot logged 64 dispatched parcels and 3 returned parcels.
+Returned parcels are counted separately from dispatched parcels.
+Forty-one of the dispatched parcels used route R7, and twenty-three used route R4. These
+route counts total sixty-four.",0.6886; 0.7104,5.127; 1.9525,not shown / not checked,,,FAIL,"FAIL: BX-47 → R7 retrieved, but R7 → Amber Quay omitted. Dispatch counts do not complete the route lookup."
+9,numeric,What is the current maximum Boreal parcel weight in kilograms?,"18.5 kg inclusive; page 1, not obsolete 15 kg on page 2.","Search
+Rank 1, page 2, p2-c1: BOREAL / OPERATIONS MANUAL
+Revision history and identifiers
+Revision 1, superseded on 1 September 2028: the standard fee was AED 22.00 and the parcel
+weight limit was 15 kg. Revision 3 governs current shipments.
+Boreal Express is a separate service coordinated by Tarek Amin. Boreal Express leaves the
+North Gate depot at 07:15. These details do not describe the Boreal delivery program.
+In this manual, lead can mean the service coordinator or the safety lead. The Boreal safety lead
+
+Rank 2, page 2, p2-c2: is Hala Saleh. Shipment BX-47 was sent using the Boreal service. Its route code is R7. It is not a Boreal
+Express shipment.
+Shipment BX-52 uses route R4. BX-52 is a fragile parcel weighing 18.5 kg. The current service
+schedule contains the rules for its fee and acceptance.
+Fictional evaluation fixture | Page 2 of 4
+
+Rank 3, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4",0.5504; 0.3195; 0.5584,5.3782; 4.1523; 2.9465,not shown / not checked,,,PASS,PASS with ranking risk: obsolete 15 kg appears first; current 18.5 kg inclusive rule appears only in rank 3.
+10,unsupported,Boreal achieved 98.7 percent on-time delivery in September 2028. What evidence verifies this?,Not enough evidence: no on-time percentage reported (page 4); absence of measurement does not contradict achieved performance.,"Search
+The indexed document does not provide enough evidence to verify the premise in this question.
+Claim checked:
+Boreal achieved 98.7 percent on-time delivery in September 2028
+",not shown,not shown,not_enough_evidence,,,PASS,Correctly reports insufficient evidence; absence of a measurement is not treated as contradiction.
+11,implicit_false,Why does Boreal provide standard weekend delivery?,Contradicted: standard service not available on weekends; separate approved Saturday emergency service does not change that rule. Page 1.,"Search
+The premise in the question is contradicted by the document.
+Claim checked:
+Boreal provide standard weekend delivery
+Evidence used for verification:
+This is a fictional operations
+document.
+NLI confidence: 99.64% | Evidence rank: 2
+Rank 1, page 1, p1-c2: fee for a fragile parcel. Fees exclude tax. This document does not specify a tax rate. Boreal accepts parcels up to and including 18.5 kg. Parcels heavier than 18.5 kg are rejected.
+Normal transit takes two business days.
+Standard delivery is not available on weekends. An approved emergency shipment may run on
+a Saturday; emergency service is a separate service.
+Fictional evaluation fixture | Page 1 of 4
+
+Rank 2, page 1, p1-c1: BOREAL / OPERATIONS MANUAL
+Current service schedule
+Boreal delivery program - revision 3, effective 1 September 2028. This is a fictional operations
+document. Physical PDF page numbers are the citation reference.
+The Boreal service coordinator is Mira Haddad. The depot is Harbor East. Standard deliveries
+leave the depot at 06:40 each weekday.
+Boreal delivery fee is AED 27.50 per parcel. There is an additional AED 4.25 fragile-handling",0.6031; 0.6107,3.5961; 1.828,contradicted,99.64,"This is a fictional operations
+document.
+",FAIL,"FAIL grounding: correct contradiction label, but verification uses “This is a fictional operations document.” at 99.64% confidence. Weekend prohibition is displayed separately."
+12,supported_exception,Noor Karim completed safety training. Is Noor allowed to drive a Boreal vehicle?,Training premise SUPPORTED (page 3); driving not allowed because permit suspended. Retrieve the two-requirement rule and Noor record; do not contradict the completed-training premise.,"Search
+The premise in the question is supported by the document.
+Claim checked:
+Noor Karim completed safety training
+Evidence used for verification:
+Noor Karim completed safety training on 12 August 2028.
+NLI confidence: 99.25% | Evidence rank: 1
+Rank 1, page 3, p3-c2: Noor Karim works as a Boreal driver. Noor Karim completed safety training on 12 August 2028. Noor Karim has a suspended permit.
+Salim Rashid holds a current permit. Salim Rashid has not completed safety training. Permit
+possession does not waive training.
+Fictional evaluation fixture | Page 3 of 4
+
+Rank 2, page 3, p3-c1: BOREAL / OPERATIONS MANUAL
+Routes and eligibility policy
+Route R7 terminates at Amber Quay. Route R4 terminates at Stone Pier. Route R9 terminates
+at Maple Yard.
+Drivers may operate a Boreal vehicle only if they hold a current permit and their safety training
+is complete. Either missing requirement prevents driving.
+Completing safety training does not itself issue a permit. A suspended permit is not a current
+permit.",0.8284; 0.4343,9.4955; 1.8107,supported,99.25,"Noor Karim completed safety training on 12 August 2028.
+",PASS,Training premise correctly supported; suspended permit and driving requirements also retrieved.

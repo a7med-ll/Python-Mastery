@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "category": "exact",
+    "question": "Who is the project owner of Atlas?",
+    "expected": "Lina Faris; p1.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 2,
+    "category": "paraphrase",
+    "question": "How long are uploaded Atlas files kept before removal?",
+    "expected": "30 days, not permanent; p1.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 3,
+    "category": "combined",
+    "question": "What is the Atlas budget including its contingency reserve?",
+    "expected": "AED 52,000 = 48,750 + 3,250; p2.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 4,
+    "category": "contradiction",
+    "question": "Atlas retains uploaded documents permanently. What is its retention policy?",
+    "expected": "Contradicted; 30 days; p1.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 5,
+    "category": "wrong_page",
+    "question": "According to page 3, what is the current Atlas PDF upload limit?",
+    "expected": "12 MB on p1; correct false page reference; p3 explicitly says so.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 6,
+    "category": "unrelated",
+    "question": "What is the capital of France?",
+    "expected": "Abstain: no supporting document evidence; p4.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 7,
+    "category": "ambiguous",
+    "question": "Who is the owner?",
+    "expected": "Clarify or distinguish Lina (project) and Noor (document); p1/p2.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 8,
+    "category": "cross_page",
+    "question": "Is Samira Nasser eligible for Atlas PDF access, and why?",
+    "expected": "Yes; Cedar membership + completed training; p3 and p4.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 9,
+    "category": "numeric",
+    "question": "What is the current maximum Atlas PDF upload size in MB?",
+    "expected": "12 MB; reject historical 8 MB; p1/p2.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 10,
+    "category": "unsupported",
+    "question": "Atlas achieved 99.9 percent uptime last year. What evidence proves this?",
+    "expected": "Not enough evidence; no uptime guarantee/performance reported; p4.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 11,
+    "category": "implicit_false",
+    "question": "Why does Atlas use an LLM API?",
+    "expected": "Correct premise: no LLM API; p1.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  },
+  {
+    "id": 12,
+    "category": "exception",
+    "question": "Yusuf Karim completed training. Can he access Atlas PDFs?",
+    "expected": "No; Birch restriction overrides completed training; p3/p4.",
+    "status": "not run",
+    "actual": null,
+    "vector_score": null,
+    "rerank_score": null,
+    "nli": null
+  }
+]

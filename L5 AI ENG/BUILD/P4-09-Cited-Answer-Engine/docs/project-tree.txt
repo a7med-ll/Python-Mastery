@@ -1,0 +1,55 @@
+P4-09-Cited-Answer-Engine/
+├── assets/
+│   ├── architecture.png
+│   ├── architecture.svg
+│   ├── evaluation-summary.png
+│   └── evaluation-summary.svg
+├── data/
+│   └── sample.pdf
+├── docs/
+│   ├── project-tree.txt
+│   ├── readme-badges.md
+│   └── setup-verification.md
+├── evaluation/
+│   ├── INDEX.md
+│   ├── adversarial_report.md
+│   ├── adversarial_report_rerun.md
+│   ├── adversarial_report_run3.md
+│   ├── atlas-final-proof.jpg
+│   ├── atlas_final_report.md
+│   ├── atlas_final_results.csv
+│   ├── atlas_final_results.json
+│   ├── boreal-final-proof.jpg
+│   ├── boreal_final_report.md
+│   ├── boreal_final_results.csv
+│   ├── boreal_final_results.json
+│   ├── boreal_test_manifest.json
+│   ├── browser_records_atlas_final.json
+│   ├── browser_records_boreal_final.json
+│   ├── browser_test_records.json
+│   ├── browser_test_records_rerun.json
+│   ├── browser_test_records_run3.json
+│   ├── test-proof-rerun.jpg
+│   ├── test-proof-run3.jpg
+│   ├── test-proof.jpg
+│   ├── test_manifest.json
+│   ├── test_results.csv
+│   ├── test_results.json
+│   ├── test_results_rerun.csv
+│   ├── test_results_rerun.json
+│   ├── test_results_run3.csv
+│   └── test_results_run3.json
+├── examples/
+│   ├── atlas_adversarial.pdf
+│   ├── automotive_retrieval_test.pdf
+│   ├── boreal_final_challenge.pdf
+│   ├── sample.pdf
+│   └── test_questions.md
+├── .gitignore
+├── LICENSE
+├── README.md
+├── app.py
+├── docker-compose.yml
+├── evaluate.py
+├── rag.py
+└── requirements.txt

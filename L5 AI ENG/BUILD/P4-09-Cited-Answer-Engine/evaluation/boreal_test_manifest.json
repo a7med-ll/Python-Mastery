@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "category": "exact",
+    "question": "Who is the Boreal service coordinator?",
+    "expected": "Mira Haddad; page 1. Do not confuse Tarek Amin, coordinator of Boreal Express."
+  },
+  {
+    "id": 2,
+    "category": "paraphrase",
+    "question": "How many working days does normal Boreal transit take?",
+    "expected": "Two business days; page 1."
+  },
+  {
+    "id": 3,
+    "category": "combined",
+    "question": "What is the fee before tax for fragile parcel BX-52, and is its weight allowed?",
+    "expected": "AED 31.75 = 27.50 + 4.25; 18.5 kg is accepted inclusively. Pages 1 and 2. Evidence must include fragile status, weight and fee/limit rules; no computed answer required for evidence-only scope."
+  },
+  {
+    "id": 4,
+    "category": "contradiction",
+    "question": "Boreal accepts parcels weighing twenty kilograms. Is that allowed by the current weight rule?",
+    "expected": "Contradicted: rejects weights over 18.5 kg; page 1."
+  },
+  {
+    "id": 5,
+    "category": "wrong_page",
+    "question": "According to page 4, at what time do standard Boreal deliveries leave?",
+    "expected": "06:40 on weekdays, supported on page 1, not page 4. Cite actual source."
+  },
+  {
+    "id": 6,
+    "category": "unrelated",
+    "question": "Who won the 2026 World Cup?",
+    "expected": "Abstain: no relevant evidence in this operations manual. Do not answer from outside knowledge."
+  },
+  {
+    "id": 7,
+    "category": "ambiguous",
+    "question": "Who is the Boreal lead?",
+    "expected": "Distinguish Mira Haddad (service coordinator, page 1) and Hala Saleh (safety lead, page 2), or clarify the role. Evidence must expose both meanings."
+  },
+  {
+    "id": 8,
+    "category": "cross_page",
+    "question": "Where does Boreal shipment BX-47 terminate?",
+    "expected": "Amber Quay: BX-47 uses R7 (page 2), R7 terminates at Amber Quay (page 3). Both link and destination must be retrieved."
+  },
+  {
+    "id": 9,
+    "category": "numeric",
+    "question": "What is the current maximum Boreal parcel weight in kilograms?",
+    "expected": "18.5 kg inclusive; page 1, not obsolete 15 kg on page 2."
+  },
+  {
+    "id": 10,
+    "category": "unsupported",
+    "question": "Boreal achieved 98.7 percent on-time delivery in September 2028. What evidence verifies this?",
+    "expected": "Not enough evidence: no on-time percentage reported (page 4); absence of measurement does not contradict achieved performance."
+  },
+  {
+    "id": 11,
+    "category": "implicit_false",
+    "question": "Why does Boreal provide standard weekend delivery?",
+    "expected": "Contradicted: standard service not available on weekends; separate approved Saturday emergency service does not change that rule. Page 1."
+  },
+  {
+    "id": 12,
+    "category": "supported_exception",
+    "question": "Noor Karim completed safety training. Is Noor allowed to drive a Boreal vehicle?",
+    "expected": "Training premise SUPPORTED (page 3); driving not allowed because permit suspended. Retrieve the two-requirement rule and Noor record; do not contradict the completed-training premise."
+  }
+]

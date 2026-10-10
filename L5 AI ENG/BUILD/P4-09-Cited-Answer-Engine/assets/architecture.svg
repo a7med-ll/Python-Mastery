@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="800" viewBox="0 0 1500 800"><rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="63.92" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">Cited Answer Engine</text>
+<text x="48" y="102.24" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#475569">Local PDF indexing, retrieval and premise verification</text>
+<text x="48" y="154.96" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2563eb">01  INDEX THE DOCUMENT</text>
+<rect x="48" y="180" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="65" y="214.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">PDF Upload</text>
+<text x="65" y="249.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Source document</text>
+<rect x="336" y="180" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="353" y="214.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">PyMuPDF Extraction</text>
+<text x="353" y="249.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Page text + layout blocks</text>
+<rect x="624" y="180" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="641" y="214.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Paragraph-Aware</text>
+<text x="641" y="249.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Chunking</text>
+<rect x="912" y="180" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="929" y="214.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">SentenceTransformer</text>
+<text x="929" y="249.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Embeddings</text>
+<rect x="1200" y="180" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1217" y="214.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Qdrant</text>
+<text x="1217" y="249.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Vectors + citation metadata</text>
+<path d="M292,228 L328,228" stroke="#64748b" stroke-width="3"/><polygon points="328,228 318.0950818741206,232.78462087522354 318.0950818741206,223.21537912477646" fill="#64748b"/>
+<path d="M580,228 L616,228" stroke="#64748b" stroke-width="3"/><polygon points="616,228 606.0950818741205,232.78462087522354 606.0950818741205,223.21537912477646" fill="#64748b"/>
+<path d="M868,228 L904,228" stroke="#64748b" stroke-width="3"/><polygon points="904,228 894.0950818741205,232.78462087522354 894.0950818741205,223.21537912477646" fill="#64748b"/>
+<path d="M1156,228 L1192,228" stroke="#64748b" stroke-width="3"/><polygon points="1192,228 1182.0950818741205,232.78462087522354 1182.0950818741205,223.21537912477646" fill="#64748b"/>
+<text x="48" y="334.96" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2563eb">02  RETRIEVE EVIDENCE</text>
+<rect x="48" y="360" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="65" y="394.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">User Question</text>
+<text x="65" y="429.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Search the active PDF</text>
+<rect x="336" y="360" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="353" y="394.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Query Embedding</text>
+<text x="353" y="429.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">SentenceTransformer</text>
+<rect x="624" y="360" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="641" y="394.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Top-K Retrieval</text>
+<text x="641" y="429.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Qdrant · top 10</text>
+<rect x="912" y="360" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="929" y="394.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">CrossEncoder</text>
+<text x="929" y="429.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Reranking · top 3</text>
+<rect x="1200" y="360" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1217" y="394.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Relevance Filtering</text>
+<text x="1217" y="429.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Remove weak passages</text>
+<path d="M292,408 L328,408" stroke="#64748b" stroke-width="3"/><polygon points="328,408 318.0950818741206,412.78462087522354 318.0950818741206,403.21537912477646" fill="#64748b"/>
+<path d="M580,408 L616,408" stroke="#64748b" stroke-width="3"/><polygon points="616,408 606.0950818741205,412.78462087522354 606.0950818741205,403.21537912477646" fill="#64748b"/>
+<path d="M868,408 L904,408" stroke="#64748b" stroke-width="3"/><polygon points="904,408 894.0950818741205,412.78462087522354 894.0950818741205,403.21537912477646" fill="#64748b"/>
+<path d="M1156,408 L1192,408" stroke="#64748b" stroke-width="3"/><polygon points="1192,408 1182.0950818741205,412.78462087522354 1182.0950818741205,403.21537912477646" fill="#64748b"/>
+<path d="M1322,276 L1322,308" stroke="#64748b" stroke-width="3"/><polygon points="1322,308 1317.2153791247765,298.0950818741206 1326.7846208752235,298.0950818741206" fill="#64748b"/>
+<path d="M1322,308 L746,308" stroke="#64748b" stroke-width="3"/><polygon points="746,308 755.9049181258795,303.21537912477646 755.9049181258795,312.78462087522354" fill="#64748b"/>
+<path d="M746,308 L746,360" stroke="#64748b" stroke-width="3"/><polygon points="746,360 741.2153791247765,350.0950818741206 750.7846208752235,350.0950818741206" fill="#64748b"/>
+<text x="48" y="516.96" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2563eb">03  VERIFY AND DISPLAY</text>
+<rect x="624" y="548" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="641" y="582.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Claim Extraction</text>
+<text x="641" y="617.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Recognized query premise</text>
+<rect x="912" y="548" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="929" y="582.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Sentence-Level NLI</text>
+<text x="929" y="617.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Supported / contradicted</text>
+<rect x="1200" y="548" width="244" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1217" y="582.6" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Cited Evidence</text>
+<text x="1217" y="617.96" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#475569">Or abstention</text>
+<path d="M1322,456 L1322,480" stroke="#64748b" stroke-width="3"/><polygon points="1322,480 1317.2153791247765,470.0950818741206 1326.7846208752235,470.0950818741206" fill="#64748b"/>
+<path d="M1322,480 L746,480" stroke="#64748b" stroke-width="3"/><polygon points="746,480 755.9049181258795,475.21537912477646 755.9049181258795,484.78462087522354" fill="#64748b"/>
+<path d="M746,480 L746,548" stroke="#64748b" stroke-width="3"/><polygon points="746,548 741.2153791247765,538.0950818741205 750.7846208752235,538.0950818741205" fill="#64748b"/>
+<path d="M868,596 L904,596" stroke="#64748b" stroke-width="3"/><polygon points="904,596 894.0950818741205,600.7846208752235 894.0950818741205,591.2153791247765" fill="#64748b"/>
+<path d="M1156,596 L1192,596" stroke="#64748b" stroke-width="3"/><polygon points="1192,596 1182.0950818741205,600.7846208752235 1182.0950818741205,591.2153791247765" fill="#64748b"/>
+<text x="48" y="698.48" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#475569">Ordinary questions display relevant passages directly; recognized premises receive an NLI check.</text>
+<text x="48" y="739.48" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#475569">Citations preserve document, physical PDF page, chunk ID and retrieval scores. All models run locally.</text></svg>

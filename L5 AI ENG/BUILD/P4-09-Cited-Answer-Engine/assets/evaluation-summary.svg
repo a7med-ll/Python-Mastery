@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720"><rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="63.92" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">Evaluation summary</text>
+<text x="48" y="103.24" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#475569">Project benchmarks · results scoped to the tested fixtures</text>
+<rect x="48" y="140" width="622" height="472" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="700" y="140" width="652" height="472" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="76" y="191.88" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#0f172a">Chunking benchmark</text>
+<text x="76" y="228.6" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#475569">Precision@3 · 10 hand-labelled questions</text>
+<text x="76" y="299.24" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#0f172a">Fixed-size</text>
+<text x="566" y="301.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#0f172a">0.40</text>
+<rect x="76" y="323" width="520" height="24" rx="5" fill="#e2e8f0" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="76" y="323" width="208.0" height="24" rx="5" fill="#2563eb" stroke="#2563eb" stroke-width="2"/>
+<text x="76" y="419.24" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#0f172a">Paragraph-aware</text>
+<text x="566" y="421.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#0f172a">0.33</text>
+<rect x="76" y="443" width="520" height="24" rx="5" fill="#e2e8f0" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="76" y="443" width="171.6" height="24" rx="5" fill="#64748b" stroke="#64748b" stroke-width="2"/>
+<text x="76" y="539.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">Scale: 0–1. Higher is better.</text>
+<text x="76" y="576.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">Live app uses paragraph-aware chunking.</text>
+<text x="728" y="191.88" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#0f172a">Verified adversarial run</text>
+<text x="728" y="228.6" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#475569">Original Atlas suite · 10 October 2026</text>
+<text x="728" y="326.2" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#2563eb">11/12</text>
+<text x="728" y="364.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">Passed scenarios</text>
+<text x="947" y="326.2" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#2563eb">91.7%</text>
+<text x="947" y="364.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">Pass rate</text>
+<text x="1168" y="326.2" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#2563eb">9/10</text>
+<text x="1168" y="364.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">System score</text>
+<text x="728" y="440.48" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#0f172a">Grounded checks require sufficient cited evidence</text>
+<text x="728" y="472.48" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#0f172a">and a relevant NLI verification sentence when shown.</text>
+<text x="728" y="539.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">System score: pass rate × 10, rounded.</text>
+<text x="728" y="576.84" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#475569">Small synthetic fixture; not production reliability.</text>
+<text x="48" y="667.6" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#475569">The chunking comparison applies to this benchmark only; it does not establish universal superiority.</text></svg>
