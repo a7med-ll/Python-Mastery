@@ -1,0 +1,364 @@
+[
+  {
+    "id": 1,
+    "category": "exact",
+    "question": "Who is the project owner of Atlas?",
+    "expected": "Lina Faris; p1.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 2,
+        "chunk": "p2-c2",
+        "text": "budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\nreturns 3 evidence chunks.\nThe word owner can refer to the project owner or the document owner. The document owner is\nNoor Rahman; the Atlas project owner is Lina Faris.\nFictional test data | Physical PDF page 2 of 4",
+        "vector_score": 0.6458,
+        "rerank_score": 8.8665
+      },
+      {
+        "rank": 2,
+        "page": 1,
+        "chunk": "p1-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nCurrent Atlas specification\nThis is a fictional test document. All names, dates and amounts are synthetic. Physical PDF\npage numbers are authoritative.\nAtlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is\nLina Faris. The launch date is 17 March 2027.\nAtlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model\nto check explicit claims. Atlas does not use an LLM API.",
+        "vector_score": 0.5944,
+        "rerank_score": 8.4931
+      },
+      {
+        "rank": 3,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.5568,
+        "rerank_score": 6.5638
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Owner correctly retrieved, including distinction from nearby names.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Who is the project owner of Atlas?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c2\n- paragraph: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\n- paragraph: returns 3 evidence chunks.\n- paragraph: The word owner can refer to the project owner or the document owner. The document owner is\n- paragraph: Noor Rahman; the Atlas project owner is Lina Faris.\n- paragraph: Fictional test data | Physical PDF page 2 of 4\n- paragraph: \"Vector score: 0.6458 | Rerank score: 8.8665\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Current Atlas specification\n- paragraph: This is a fictional test document. All names, dates and amounts are synthetic. Physical PDF\n- paragraph: page numbers are authoritative.\n- paragraph: Atlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is\n- paragraph: Lina Faris. The launch date is 17 March 2027.\n- paragraph: Atlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model\n- paragraph: to check explicit claims. Atlas does not use an LLM API.\n- paragraph: \"Vector score: 0.5944 | Rerank score: 8.4931\"\n- 'heading \"Result #3\" [level=3]':\n  - text: \"Result #3\"\n  - link \"Link to heading\":\n    - /url: \"#result-3\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.5568 | Rerank score: 6.5638\""
+  },
+  {
+    "id": 2,
+    "category": "paraphrase",
+    "question": "How long are uploaded Atlas files kept before removal?",
+    "expected": "30 days, not permanent; p1.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 1,
+        "chunk": "p1-c2",
+        "text": "The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\nAtlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n27001 certification.\nFictional test data | Physical PDF page 1 of 4",
+        "vector_score": 0.6399,
+        "rerank_score": 6.3026
+      },
+      {
+        "rank": 2,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.5653,
+        "rerank_score": 4.1031
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Current 30-day retention retrieved.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: How long are uploaded Atlas files kept before removal?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c2\n- paragraph: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\n- paragraph: Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n- paragraph: 27001 certification.\n- paragraph: Fictional test data | Physical PDF page 1 of 4\n- paragraph: \"Vector score: 0.6399 | Rerank score: 6.3026\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.5653 | Rerank score: 4.1031\""
+  },
+  {
+    "id": 3,
+    "category": "combined",
+    "question": "What is the Atlas budget including its contingency reserve?",
+    "expected": "AED 52,000 = 48,750 + 3,250; p2.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 2,
+        "chunk": "p2-c2",
+        "text": "budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\nreturns 3 evidence chunks.\nThe word owner can refer to the project owner or the document owner. The document owner is\nNoor Rahman; the Atlas project owner is Lina Faris.\nFictional test data | Physical PDF page 2 of 4",
+        "vector_score": 0.622,
+        "rerank_score": 6.3
+      },
+      {
+        "rank": 2,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.5652,
+        "rerank_score": 5.5102
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Both AED 48,750 and AED 3,250 retrieved; enough evidence to derive AED 52,000.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: What is the Atlas budget including its contingency reserve?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c2\n- paragraph: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\n- paragraph: returns 3 evidence chunks.\n- paragraph: The word owner can refer to the project owner or the document owner. The document owner is\n- paragraph: Noor Rahman; the Atlas project owner is Lina Faris.\n- paragraph: Fictional test data | Physical PDF page 2 of 4\n- paragraph: \"Vector score: 0.6220 | Rerank score: 6.3000\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.5652 | Rerank score: 5.5102\""
+  },
+  {
+    "id": 4,
+    "category": "contradiction",
+    "question": "Atlas retains uploaded documents permanently. What is its retention policy?",
+    "expected": "Contradicted; 30 days; p1.",
+    "actual_status": "Search\nThe premise in the question is contradicted by the document.\nClaim checked:\nAtlas retains uploaded documents permanently\nEvidence used for verification:\nIts contingency reserve is AED 3,250.\nNLI confidence: 99.91% | Evidence rank: 2",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 1,
+        "chunk": "p1-c2",
+        "text": "The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\nAtlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n27001 certification.\nFictional test data | Physical PDF page 1 of 4",
+        "vector_score": 0.7127,
+        "rerank_score": 7.0173
+      },
+      {
+        "rank": 2,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.6333,
+        "rerank_score": 2.8714
+      }
+    ],
+    "nli": "contradicted",
+    "nli_confidence_percent": 99.91,
+    "verification_evidence_rank": 2,
+    "verification_sentence": "Its contingency reserve is AED 3,250.\n",
+    "grounded_pass": false,
+    "legacy_pass": true,
+    "notes": "Correct contradiction label and retention evidence, but verification uses unrelated sentence: \u201cIts contingency reserve is AED 3,250.\u201d Grounding failure despite 99.91% confidence.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Atlas retains uploaded documents permanently. What is its retention policy?\n- button \"Search\" [active]:\n  - paragraph: Search\n- alert:\n  - paragraph: The premise in the question is contradicted by the document.\n- paragraph:\n  - strong: \"Claim checked:\"\n  - text: Atlas retains uploaded documents permanently\n- paragraph:\n  - strong: \"Evidence used for verification:\"\n  - text: Its contingency reserve is AED 3,250.\n- paragraph: \"NLI confidence: 99.91% | Evidence rank: 2\"\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c2\n- paragraph: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\n- paragraph: Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n- paragraph: 27001 certification.\n- paragraph: Fictional test data | Physical PDF page 1 of 4\n- paragraph: \"Vector score: 0.7127 | Rerank score: 7.0173\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.6333 | Rerank score: 2.8714\""
+  },
+  {
+    "id": 5,
+    "category": "wrong_page",
+    "question": "According to page 3, what is the current Atlas PDF upload limit?",
+    "expected": "12 MB on p1; correct false page reference; p3 explicitly says so.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 1,
+        "chunk": "p1-c2",
+        "text": "The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\nAtlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n27001 certification.\nFictional test data | Physical PDF page 1 of 4",
+        "vector_score": 0.8068,
+        "rerank_score": 6.8622
+      },
+      {
+        "rank": 2,
+        "page": 3,
+        "chunk": "p3-c2",
+        "text": "No access password, API key or administrator credential is included in this document. Page 3 contains access policy. The current PDF upload limit is stated on page 1, not page 3.\nFictional test data | Physical PDF page 3 of 4",
+        "vector_score": 0.5913,
+        "rerank_score": 4.4803
+      },
+      {
+        "rank": 3,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.6236,
+        "rerank_score": 4.4107
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Current 12 MB limit and actual source pages retrieved despite incorrect page premise.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: According to page 3, what is the current Atlas PDF upload limit?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c2\n- paragraph: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\n- paragraph: Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n- paragraph: 27001 certification.\n- paragraph: Fictional test data | Physical PDF page 1 of 4\n- paragraph: \"Vector score: 0.8068 | Rerank score: 6.8622\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 3 |\n  - strong: \"Chunk:\"\n  - text: p3-c2\n- paragraph: No access password, API key or administrator credential is included in this document. Page 3 contains access policy. The current PDF upload limit is stated on page 1, not page 3.\n- paragraph: Fictional test data | Physical PDF page 3 of 4\n- paragraph: \"Vector score: 0.5913 | Rerank score: 4.4803\"\n- 'heading \"Result #3\" [level=3]':\n  - text: \"Result #3\"\n  - link \"Link to heading\":\n    - /url: \"#result-3\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.6236 | Rerank score: 4.4107\""
+  },
+  {
+    "id": 6,
+    "category": "unrelated",
+    "question": "What is the capital of France?",
+    "expected": "Abstain: no supporting document evidence; p4.",
+    "actual_status": "Search\nNo sufficiently relevant evidence was found in the indexed document.",
+    "evidence": [],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Correctly abstains on an unrelated question.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: What is the capital of France?\n- button \"Search\" [active]:\n  - paragraph: Search\n- alert:\n  - paragraph: No sufficiently relevant evidence was found in the indexed document."
+  },
+  {
+    "id": 7,
+    "category": "ambiguous",
+    "question": "Who is the owner?",
+    "expected": "Clarify or distinguish Lina (project) and Noor (document); p1/p2.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 2,
+        "chunk": "p2-c2",
+        "text": "budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\nreturns 3 evidence chunks.\nThe word owner can refer to the project owner or the document owner. The document owner is\nNoor Rahman; the Atlas project owner is Lina Faris.\nFictional test data | Physical PDF page 2 of 4",
+        "vector_score": 0.3529,
+        "rerank_score": 1.8908
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Evidence distinguishes project owner Lina Faris and document owner Noor Rahman.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Who is the owner?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c2\n- paragraph: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker\n- paragraph: returns 3 evidence chunks.\n- paragraph: The word owner can refer to the project owner or the document owner. The document owner is\n- paragraph: Noor Rahman; the Atlas project owner is Lina Faris.\n- paragraph: Fictional test data | Physical PDF page 2 of 4\n- paragraph: \"Vector score: 0.3529 | Rerank score: 1.8908\""
+  },
+  {
+    "id": 8,
+    "category": "cross_page",
+    "question": "Is Samira Nasser eligible for Atlas PDF access, and why?",
+    "expected": "Yes; Cedar membership + completed training; p3 and p4.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 3,
+        "chunk": "p3-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nAccess rules and exception\nAtlas allows PDF access to members of the Cedar team only when their training is complete. A\nCedar member without completed training is not eligible.\nMembers of the Birch team cannot access Atlas PDFs, even if their training is complete.\nContractors cannot access Atlas PDFs.\nSamira Nasser is a Cedar team member. Her training completion status is recorded on page 4.",
+        "vector_score": 0.612,
+        "rerank_score": 7.8051
+      },
+      {
+        "rank": 2,
+        "page": 4,
+        "chunk": "p4-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nTraining register and unsupported matters\nSamira Nasser completed the required training on 9 March 2027. Combining this record with\nthe access rules on page 3 establishes her eligibility for Atlas PDF access.\nYusuf Karim is a Birch team member and completed training on 8 March 2027. Completed\ntraining does not override the Birch access restriction.\nNo customer satisfaction percentage, uptime guarantee, investment return, or comparison",
+        "vector_score": 0.5821,
+        "rerank_score": 7.4978
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Policy and Samira\u2019s membership/training record both retrieved.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Is Samira Nasser eligible for Atlas PDF access, and why?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 3 |\n  - strong: \"Chunk:\"\n  - text: p3-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Access rules and exception\n- paragraph: Atlas allows PDF access to members of the Cedar team only when their training is complete. A\n- paragraph: Cedar member without completed training is not eligible.\n- paragraph: Members of the Birch team cannot access Atlas PDFs, even if their training is complete.\n- paragraph: Contractors cannot access Atlas PDFs.\n- paragraph: Samira Nasser is a Cedar team member. Her training completion status is recorded on page 4.\n- paragraph: \"Vector score: 0.6120 | Rerank score: 7.8051\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 4 |\n  - strong: \"Chunk:\"\n  - text: p4-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Training register and unsupported matters\n- paragraph: Samira Nasser completed the required training on 9 March 2027. Combining this record with\n- paragraph: the access rules on page 3 establishes her eligibility for Atlas PDF access.\n- paragraph: Yusuf Karim is a Birch team member and completed training on 8 March 2027. Completed\n- paragraph: training does not override the Birch access restriction.\n- paragraph: No customer satisfaction percentage, uptime guarantee, investment return, or comparison\n- paragraph: \"Vector score: 0.5821 | Rerank score: 7.4978\""
+  },
+  {
+    "id": 9,
+    "category": "numeric",
+    "question": "What is the current maximum Atlas PDF upload size in MB?",
+    "expected": "12 MB; reject historical 8 MB; p1/p2.",
+    "actual_status": "Search",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 1,
+        "chunk": "p1-c2",
+        "text": "The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\nAtlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n27001 certification.\nFictional test data | Physical PDF page 1 of 4",
+        "vector_score": 0.7545,
+        "rerank_score": 7.0004
+      },
+      {
+        "rank": 2,
+        "page": 2,
+        "chunk": "p2-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nHistorical settings and nearby names\nHistorical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\nretained files for 90 days. These are not the current limits.\nA separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\nAtlas Blue is not the Atlas retrieval pilot.\nThe Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",
+        "vector_score": 0.5847,
+        "rerank_score": 3.8451
+      }
+    ],
+    "nli": "not shown / not checked",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Current 12 MB limit retrieved; historical 8 MB is identified as superseded.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: What is the current maximum Atlas PDF upload size in MB?\n- button \"Search\" [active]:\n  - paragraph: Search\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c2\n- paragraph: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.\n- paragraph: Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO\n- paragraph: 27001 certification.\n- paragraph: Fictional test data | Physical PDF page 1 of 4\n- paragraph: \"Vector score: 0.7545 | Rerank score: 7.0004\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 2 |\n  - strong: \"Chunk:\"\n  - text: p2-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Historical settings and nearby names\n- paragraph: \"Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and\"\n- paragraph: retained files for 90 days. These are not the current limits.\n- paragraph: A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April\n- list:\n  - listitem: Atlas Blue is not the Atlas retrieval pilot.\n- paragraph: The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The\n- paragraph: \"Vector score: 0.5847 | Rerank score: 3.8451\""
+  },
+  {
+    "id": 10,
+    "category": "unsupported",
+    "question": "Atlas achieved 99.9 percent uptime last year. What evidence proves this?",
+    "expected": "Not enough evidence; no uptime guarantee/performance reported; p4.",
+    "actual_status": "Search\nThe indexed document does not provide enough evidence to verify the premise in this question.\nClaim checked:\nAtlas achieved 99.9 percent uptime last year",
+    "evidence": [],
+    "nli": "not_enough_evidence",
+    "nli_confidence_percent": null,
+    "verification_evidence_rank": null,
+    "verification_sentence": null,
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Correctly reports insufficient evidence; decimal 99.9 preserved in checked claim.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Atlas achieved 99.9 percent uptime last year. What evidence proves this?\n- button \"Search\" [active]:\n  - paragraph: Search\n- alert:\n  - paragraph: The indexed document does not provide enough evidence to verify the premise in this question.\n- paragraph:\n  - strong: \"Claim checked:\"\n  - text: Atlas achieved 99.9 percent uptime last year"
+  },
+  {
+    "id": 11,
+    "category": "implicit_false",
+    "question": "Why does Atlas use an LLM API?",
+    "expected": "Correct premise: no LLM API; p1.",
+    "actual_status": "Search\nThe premise in the question is contradicted by the document.\nClaim checked:\nAtlas use an LLM API\nEvidence used for verification:\nAtlas does not use an LLM API.\nNLI confidence: 99.60% | Evidence rank: 1",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 1,
+        "chunk": "p1-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nCurrent Atlas specification\nThis is a fictional test document. All names, dates and amounts are synthetic. Physical PDF\npage numbers are authoritative.\nAtlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is\nLina Faris. The launch date is 17 March 2027.\nAtlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model\nto check explicit claims. Atlas does not use an LLM API.",
+        "vector_score": 0.627,
+        "rerank_score": 5.6317
+      }
+    ],
+    "nli": "contradicted",
+    "nli_confidence_percent": 99.6,
+    "verification_evidence_rank": 1,
+    "verification_sentence": "Atlas does not use an LLM API.\n",
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Correct contradiction grounded in \u201cAtlas does not use an LLM API.\u201d",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Why does Atlas use an LLM API?\n- button \"Search\" [active]:\n  - paragraph: Search\n- alert:\n  - paragraph: The premise in the question is contradicted by the document.\n- paragraph:\n  - strong: \"Claim checked:\"\n  - text: Atlas use an LLM API\n- paragraph:\n  - strong: \"Evidence used for verification:\"\n  - text: Atlas does not use an LLM API.\n- paragraph: \"NLI confidence: 99.60% | Evidence rank: 1\"\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 1 |\n  - strong: \"Chunk:\"\n  - text: p1-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Current Atlas specification\n- paragraph: This is a fictional test document. All names, dates and amounts are synthetic. Physical PDF\n- paragraph: page numbers are authoritative.\n- paragraph: Atlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is\n- paragraph: Lina Faris. The launch date is 17 March 2027.\n- paragraph: Atlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model\n- paragraph: to check explicit claims. Atlas does not use an LLM API.\n- paragraph: \"Vector score: 0.6270 | Rerank score: 5.6317\""
+  },
+  {
+    "id": 12,
+    "category": "exception",
+    "question": "Yusuf Karim completed training. Can he access Atlas PDFs?",
+    "expected": "No; Birch restriction overrides completed training; p3/p4.",
+    "actual_status": "Search\nThe premise in the question is supported by the document.\nClaim checked:\nYusuf Karim completed training\nEvidence used for verification:\nYusuf Karim is a Birch team member and completed training on 8 March 2027.\nNLI confidence: 98.90% | Evidence rank: 1",
+    "evidence": [
+      {
+        "rank": 1,
+        "page": 4,
+        "chunk": "p4-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nTraining register and unsupported matters\nSamira Nasser completed the required training on 9 March 2027. Combining this record with\nthe access rules on page 3 establishes her eligibility for Atlas PDF access.\nYusuf Karim is a Birch team member and completed training on 8 March 2027. Completed\ntraining does not override the Birch access restriction.\nNo customer satisfaction percentage, uptime guarantee, investment return, or comparison",
+        "vector_score": 0.7627,
+        "rerank_score": 8.8309
+      },
+      {
+        "rank": 2,
+        "page": 3,
+        "chunk": "p3-c1",
+        "text": "ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\nAccess rules and exception\nAtlas allows PDF access to members of the Cedar team only when their training is complete. A\nCedar member without completed training is not eligible.\nMembers of the Birch team cannot access Atlas PDFs, even if their training is complete.\nContractors cannot access Atlas PDFs.\nSamira Nasser is a Cedar team member. Her training completion status is recorded on page 4.",
+        "vector_score": 0.5648,
+        "rerank_score": 4.0253
+      }
+    ],
+    "nli": "supported",
+    "nli_confidence_percent": 98.9,
+    "verification_evidence_rank": 1,
+    "verification_sentence": "Yusuf Karim is a Birch team member and completed training on 8 March 2027.\n",
+    "grounded_pass": true,
+    "legacy_pass": true,
+    "notes": "Training premise correctly supported; Birch access restriction also retrieved. Earlier false contradiction is fixed.",
+    "raw_browser_output": "- banner:\n  - button \"Deploy\":\n    - generic: Deploy\n  - button \"Main menu\":\n- heading \"Cited Answer Engine\" [level=1]:\n  - text: Cited Answer Engine\n  - link \"Link to heading\":\n    - /url: \"#cited-answer-engine\"\n- paragraph: Upload a PDF, index it, and search for the most relevant cited evidence.\n- paragraph: Upload PDF\n- region \"Upload PDF\":\n  - button \"file upload\"\n  - generic \"atlas_adversarial.pdf, 5.6KB\":\n    - generic \"atlas_adversarial.pdf\": atlas_a...sarial.pdf\n    - generic: 5.6KB\n    - button \"Remove atlas_adversarial.pdf\":\n  - button \"Add files\":\n    - generic: add\n- status:\n  - paragraph: \"Uploaded: atlas_adversarial.pdf\"\n- button \"Index Document\":\n  - paragraph: Index Document\n- separator\n- heading \"Search Document\" [level=3]:\n  - text: Search Document\n  - link \"Link to heading\":\n    - /url: \"#search-document\"\n- paragraph: Ask a question about the uploaded document\n- textbox \"Ask a question about the uploaded document\":\n  - /placeholder: e.g. What is the current upload limit?\n  - text: Yusuf Karim completed training. Can he access Atlas PDFs?\n- button \"Search\" [active]:\n  - paragraph: Search\n- status:\n  - paragraph: The premise in the question is supported by the document.\n- paragraph:\n  - strong: \"Claim checked:\"\n  - text: Yusuf Karim completed training\n- paragraph:\n  - strong: \"Evidence used for verification:\"\n  - text: Yusuf Karim is a Birch team member and completed training on 8 March 2027.\n- paragraph: \"NLI confidence: 98.90% | Evidence rank: 1\"\n- heading \"Most Relevant Evidence\" [level=3]:\n  - text: Most Relevant Evidence\n  - link \"Link to heading\":\n    - /url: \"#most-relevant-evidence\"\n- 'heading \"Result #1\" [level=3]':\n  - text: \"Result #1\"\n  - link \"Link to heading\":\n    - /url: \"#result-1\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 4 |\n  - strong: \"Chunk:\"\n  - text: p4-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Training register and unsupported matters\n- paragraph: Samira Nasser completed the required training on 9 March 2027. Combining this record with\n- paragraph: the access rules on page 3 establishes her eligibility for Atlas PDF access.\n- paragraph: Yusuf Karim is a Birch team member and completed training on 8 March 2027. Completed\n- paragraph: training does not override the Birch access restriction.\n- paragraph: No customer satisfaction percentage, uptime guarantee, investment return, or comparison\n- paragraph: \"Vector score: 0.7627 | Rerank score: 8.8309\"\n- 'heading \"Result #2\" [level=3]':\n  - text: \"Result #2\"\n  - link \"Link to heading\":\n    - /url: \"#result-2\"\n- paragraph:\n  - strong: \"Document:\"\n  - text: atlas_adversarial.pdf |\n  - strong: \"Page:\"\n  - text: 3 |\n  - strong: \"Chunk:\"\n  - text: p3-c1\n- paragraph: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE\n- paragraph: Access rules and exception\n- paragraph: Atlas allows PDF access to members of the Cedar team only when their training is complete. A\n- paragraph: Cedar member without completed training is not eligible.\n- paragraph: Members of the Birch team cannot access Atlas PDFs, even if their training is complete.\n- paragraph: Contractors cannot access Atlas PDFs.\n- paragraph: Samira Nasser is a Cedar team member. Her training completion status is recorded on page 4.\n- paragraph: \"Vector score: 0.5648 | Rerank score: 4.0253\""
+  }
+]

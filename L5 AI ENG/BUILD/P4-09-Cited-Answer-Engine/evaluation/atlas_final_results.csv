@@ -1,0 +1,169 @@
+id,category,question,expected,actual_output,vector_scores,rerank_scores,nli,nli_confidence_percent,verification_sentence,pass_fail,notes
+1,exact,Who is the project owner of Atlas?,Lina Faris; p1.,"Search
+Rank 1, page 2, p2-c2: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker
+returns 3 evidence chunks.
+The word owner can refer to the project owner or the document owner. The document owner is
+Noor Rahman; the Atlas project owner is Lina Faris.
+Fictional test data | Physical PDF page 2 of 4
+
+Rank 2, page 1, p1-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Current Atlas specification
+This is a fictional test document. All names, dates and amounts are synthetic. Physical PDF
+page numbers are authoritative.
+Atlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is
+Lina Faris. The launch date is 17 March 2027.
+Atlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model
+to check explicit claims. Atlas does not use an LLM API.
+
+Rank 3, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.6458; 0.5944; 0.5568,8.8665; 8.4931; 6.5638,not shown / not checked,,,PASS,"Owner correctly retrieved, including distinction from nearby names."
+2,paraphrase,How long are uploaded Atlas files kept before removal?,"30 days, not permanent; p1.","Search
+Rank 1, page 1, p1-c2: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.
+Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO
+27001 certification.
+Fictional test data | Physical PDF page 1 of 4
+
+Rank 2, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.6399; 0.5653,6.3026; 4.1031,not shown / not checked,,,PASS,Current 30-day retention retrieved.
+3,combined,What is the Atlas budget including its contingency reserve?,"AED 52,000 = 48,750 + 3,250; p2.","Search
+Rank 1, page 2, p2-c2: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker
+returns 3 evidence chunks.
+The word owner can refer to the project owner or the document owner. The document owner is
+Noor Rahman; the Atlas project owner is Lina Faris.
+Fictional test data | Physical PDF page 2 of 4
+
+Rank 2, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.622; 0.5652,6.3; 5.5102,not shown / not checked,,,PASS,"Both AED 48,750 and AED 3,250 retrieved; enough evidence to derive AED 52,000."
+4,contradiction,Atlas retains uploaded documents permanently. What is its retention policy?,Contradicted; 30 days; p1.,"Search
+The premise in the question is contradicted by the document.
+Claim checked:
+Atlas retains uploaded documents permanently
+Evidence used for verification:
+Its contingency reserve is AED 3,250.
+NLI confidence: 99.91% | Evidence rank: 2
+Rank 1, page 1, p1-c2: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.
+Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO
+27001 certification.
+Fictional test data | Physical PDF page 1 of 4
+
+Rank 2, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.7127; 0.6333,7.0173; 2.8714,contradicted,99.91,"Its contingency reserve is AED 3,250.
+",FAIL,"Correct contradiction label and retention evidence, but verification uses unrelated sentence: “Its contingency reserve is AED 3,250.” Grounding failure despite 99.91% confidence."
+5,wrong_page,"According to page 3, what is the current Atlas PDF upload limit?",12 MB on p1; correct false page reference; p3 explicitly says so.,"Search
+Rank 1, page 1, p1-c2: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.
+Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO
+27001 certification.
+Fictional test data | Physical PDF page 1 of 4
+
+Rank 2, page 3, p3-c2: No access password, API key or administrator credential is included in this document. Page 3 contains access policy. The current PDF upload limit is stated on page 1, not page 3.
+Fictional test data | Physical PDF page 3 of 4
+
+Rank 3, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.8068; 0.5913; 0.6236,6.8622; 4.4803; 4.4107,not shown / not checked,,,PASS,Current 12 MB limit and actual source pages retrieved despite incorrect page premise.
+6,unrelated,What is the capital of France?,Abstain: no supporting document evidence; p4.,"Search
+No sufficiently relevant evidence was found in the indexed document.
+",not shown,not shown,not shown / not checked,,,PASS,Correctly abstains on an unrelated question.
+7,ambiguous,Who is the owner?,Clarify or distinguish Lina (project) and Noor (document); p1/p2.,"Search
+Rank 1, page 2, p2-c2: budget excludes the contingency reserve. In the current Atlas pilot, the maximum number of retrieved candidates is 10, and the reranker
+returns 3 evidence chunks.
+The word owner can refer to the project owner or the document owner. The document owner is
+Noor Rahman; the Atlas project owner is Lina Faris.
+Fictional test data | Physical PDF page 2 of 4",0.3529,1.8908,not shown / not checked,,,PASS,Evidence distinguishes project owner Lina Faris and document owner Noor Rahman.
+8,cross_page,"Is Samira Nasser eligible for Atlas PDF access, and why?",Yes; Cedar membership + completed training; p3 and p4.,"Search
+Rank 1, page 3, p3-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Access rules and exception
+Atlas allows PDF access to members of the Cedar team only when their training is complete. A
+Cedar member without completed training is not eligible.
+Members of the Birch team cannot access Atlas PDFs, even if their training is complete.
+Contractors cannot access Atlas PDFs.
+Samira Nasser is a Cedar team member. Her training completion status is recorded on page 4.
+
+Rank 2, page 4, p4-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Training register and unsupported matters
+Samira Nasser completed the required training on 9 March 2027. Combining this record with
+the access rules on page 3 establishes her eligibility for Atlas PDF access.
+Yusuf Karim is a Birch team member and completed training on 8 March 2027. Completed
+training does not override the Birch access restriction.
+No customer satisfaction percentage, uptime guarantee, investment return, or comparison",0.612; 0.5821,7.8051; 7.4978,not shown / not checked,,,PASS,Policy and Samira’s membership/training record both retrieved.
+9,numeric,What is the current maximum Atlas PDF upload size in MB?,12 MB; reject historical 8 MB; p1/p2.,"Search
+Rank 1, page 1, p1-c2: The current upload limit is 12 MB per PDF. The current retention period is 30 days. Uploaded documents are not retained permanently.
+Atlas encrypts stored documents at rest. This document does not state that Atlas holds ISO
+27001 certification.
+Fictional test data | Physical PDF page 1 of 4
+
+Rank 2, page 2, p2-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Historical settings and nearby names
+Historical record, superseded: before 1 February 2027, Atlas allowed 8 MB per PDF and
+retained files for 90 days. These are not the current limits.
+A separate project named Atlas Blue is owned by Omar Salim. Atlas Blue launches on 21 April
+Atlas Blue is not the Atlas retrieval pilot.
+The Atlas retrieval pilot has a budget of AED 48,750. Its contingency reserve is AED 3,250. The",0.7545; 0.5847,7.0004; 3.8451,not shown / not checked,,,PASS,Current 12 MB limit retrieved; historical 8 MB is identified as superseded.
+10,unsupported,Atlas achieved 99.9 percent uptime last year. What evidence proves this?,Not enough evidence; no uptime guarantee/performance reported; p4.,"Search
+The indexed document does not provide enough evidence to verify the premise in this question.
+Claim checked:
+Atlas achieved 99.9 percent uptime last year
+",not shown,not shown,not_enough_evidence,,,PASS,Correctly reports insufficient evidence; decimal 99.9 preserved in checked claim.
+11,implicit_false,Why does Atlas use an LLM API?,Correct premise: no LLM API; p1.,"Search
+The premise in the question is contradicted by the document.
+Claim checked:
+Atlas use an LLM API
+Evidence used for verification:
+Atlas does not use an LLM API.
+NLI confidence: 99.60% | Evidence rank: 1
+Rank 1, page 1, p1-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Current Atlas specification
+This is a fictional test document. All names, dates and amounts are synthetic. Physical PDF
+page numbers are authoritative.
+Atlas is a text-based document retrieval pilot operated by Meridian Lab. Its project owner is
+Lina Faris. The launch date is 17 March 2027.
+Atlas uses Qdrant for vector storage, a local cross-encoder for reranking, and a local NLI model
+to check explicit claims. Atlas does not use an LLM API.",0.627,5.6317,contradicted,99.6,"Atlas does not use an LLM API.
+",PASS,Correct contradiction grounded in “Atlas does not use an LLM API.”
+12,exception,Yusuf Karim completed training. Can he access Atlas PDFs?,No; Birch restriction overrides completed training; p3/p4.,"Search
+The premise in the question is supported by the document.
+Claim checked:
+Yusuf Karim completed training
+Evidence used for verification:
+Yusuf Karim is a Birch team member and completed training on 8 March 2027.
+NLI confidence: 98.90% | Evidence rank: 1
+Rank 1, page 4, p4-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Training register and unsupported matters
+Samira Nasser completed the required training on 9 March 2027. Combining this record with
+the access rules on page 3 establishes her eligibility for Atlas PDF access.
+Yusuf Karim is a Birch team member and completed training on 8 March 2027. Completed
+training does not override the Birch access restriction.
+No customer satisfaction percentage, uptime guarantee, investment return, or comparison
+
+Rank 2, page 3, p3-c1: ATLAS / ADVERSARIAL RETRIEVAL FIXTURE
+Access rules and exception
+Atlas allows PDF access to members of the Cedar team only when their training is complete. A
+Cedar member without completed training is not eligible.
+Members of the Birch team cannot access Atlas PDFs, even if their training is complete.
+Contractors cannot access Atlas PDFs.
+Samira Nasser is a Cedar team member. Her training completion status is recorded on page 4.",0.7627; 0.5648,8.8309; 4.0253,supported,98.9,"Yusuf Karim is a Birch team member and completed training on 8 March 2027.
+",PASS,Training premise correctly supported; Birch access restriction also retrieved. Earlier false contradiction is fixed.

@@ -1,0 +1,17 @@
+# --> Streamlit web interface
+streamlit
+
+# --> PDF text and layout extraction
+pymupdf
+
+# --> Embedding, reranking, and NLI models
+sentence-transformers
+
+# --> Numerical operations and cosine similarity
+numpy
+
+# --> Vector database Python client
+qdrant-client
+
+# --> Deep learning backend used by SentenceTransformers
+torch
